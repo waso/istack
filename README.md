@@ -1,7 +1,8 @@
 istack
 ====
 
-Small and lightweight stack data structure implemented in plain C.
+Lightweight stack data structure specialized for intigers and implemented in plain C.
+
 
 Usage
 -----
