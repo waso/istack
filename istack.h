@@ -9,39 +9,34 @@ extern "C" {
 #endif
 
 typedef struct {
-    int * data;
+    int *data;
     int size;
     int top;
 } istack;
 
 /* initialize istack structure */
 
-void istack_init(istack * st);
-
+void istack_init(istack *st);
 
 /* return amount of elements on the stack */
 
-int istack_length(istack * st);
-
+int istack_length(istack *st);
 
 /* return value on top of the stack without removing it */
 
-int istack_top(istack * st);
-
+int istack_top(istack *st);
 
 /* add new value on top of the stack */
 
-void istack_push(istack * st, int value);
-
+void istack_push(istack *st, int value);
 
 /* remove and return value from top of the stack */
 
-int istack_pop(istack * st);
-
+int istack_pop(istack *st);
 
 /* cleanup */
 
-void istack_destroy(istack * st);
+void istack_destroy(istack *st);
 
 #ifdef __cplusplus
 }
