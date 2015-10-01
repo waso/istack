@@ -8,9 +8,13 @@ Usage
 -----
 
 	istack st;
+	int val;
+
 	istack_init(&st);
 	istack_push(&st, 123);
-	printf("%d ", istack_top(&st));
+	istack_top(&st, &val);
+
+	printf("%d ", val);
 	istack_destroy(&st);
 
 
