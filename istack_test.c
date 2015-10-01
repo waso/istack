@@ -33,16 +33,19 @@ static void test(int (*func)(void), const char *name) {
 int test_simple() {
     istack st;
     int i;
+    int val;
 
-    istack_init(&st);
+    check(istack_init(&st));
     check(istack_length(&st) == 0);
     for (i = 0; i < 10; i++) {
-        istack_push(&st, i);
-        check(istack_top(&st) == i);
+        check(istack_push(&st, i));
+        check(istack_top(&st, &val));
+        check(val == i);
     }
     check(istack_length(&st) == 10);
     for (i = 9; i >= 0; i--) {
-        check(istack_pop(&st) == i);
+        check(istack_pop(&st, &val));
+        check(val == i);
         check(istack_length(&st) == i);
     }
     istack_destroy(&st);

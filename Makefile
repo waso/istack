@@ -19,7 +19,7 @@ example: example.o libistack.a
 	$(CC) $(LDFLAGS) $^ -o $@
 
 clean:
-	rm -f istack.o istack_test.o example.o
+	rm -f *.o
 	rm -f istack_test
 	rm -f libistack.a
 	rm -f example

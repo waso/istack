@@ -16,7 +16,7 @@ typedef struct {
 
 /* initialize istack structure */
 
-void istack_init(istack *st);
+int istack_init(istack *st);
 
 /* return amount of elements on the stack */
 
@@ -24,15 +24,15 @@ int istack_length(istack *st);
 
 /* return value on top of the stack without removing it */
 
-int istack_top(istack *st);
+int istack_top(istack *st, int *out);
 
 /* add new value on top of the stack */
 
-void istack_push(istack *st, int value);
+int istack_push(istack *st, int value);
 
 /* remove and return value from top of the stack */
 
-int istack_pop(istack *st);
+int istack_pop(istack *st, int *out);
 
 /* cleanup */
 
