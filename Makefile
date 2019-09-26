@@ -1,4 +1,4 @@
-CC=gcc-5
+CC=gcc
 CFLAGS=-Wall -Werror -O3 -pedantic -std=c11
 
 all: libistack.a test
