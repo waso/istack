@@ -37,7 +37,6 @@ int main(int argc, char *argv[]) {
 
     arr_size = sizeof(stocks)/sizeof(int);
     for (i = 1; i < arr_size; i++) {
-        stack_print(&st);
         istack_top(&st, &val);
         while (istack_length(&st) > 0 && stocks[val] <= stocks[i]) {
             istack_pop(&st, &val);
