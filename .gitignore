@@ -1,0 +1,6 @@
+*.o
+.vs*
+*.a
+example
+istack_test
+stock_span
